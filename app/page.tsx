@@ -47,12 +47,13 @@ export default function Home() {
 
         {/* PAIN BLOCK */}
         <div style={styles.pain}>
-          <p style={styles.painText}>Você já perdeu uma operação que <strong>sabia que não devia fazer?</strong></p>
-          <p style={styles.painText}>Já ignorou o stop loss <strong>"só dessa vez"?</strong></p>
-          <p style={styles.painText}>Já ficou na frente do gráfico com raiva, tentando <strong>recuperar o que perdeu?</strong></p>
-          <p style={{ ...styles.painText, marginTop: 16, color: 'var(--text)' }}>
-            Não é falta de estratégia. <strong>É falta de estrutura.</strong>
-          </p>
+          <p style={styles.painText}>Você já entrou em uma operação que sabia que não devia?</p>
+          <p style={styles.painText}>Ignorou o stop… só dessa vez?</p>
+          <p style={styles.painText}>Tentou recuperar no impulso… e piorou tudo?</p>
+          <p style={styles.painHighlight}>E no final do dia… não foi o mercado.</p>
+          <p style={styles.painHighlight}>Foi você.</p>
+          <p style={styles.painHighlight}>Não é falta de estratégia.</p>
+          <p style={{ ...styles.painHighlight, fontWeight: 700 }}>É falta de controle quando mais importa.</p>
         </div>
 
         {/* FORM */}
@@ -189,7 +190,8 @@ const styles: Record<string, React.CSSProperties> = {
     borderRadius: 16, padding: '28px 32px', textAlign: 'left',
     animation: 'fadeUp 0.7s ease forwards 0.6s', opacity: 0,
   },
-  painText: { fontSize: 15, color: '#9ca3af', lineHeight: 1.8, marginTop: 8 },
+  painText: { fontSize: 15, color: '#9ca3af', lineHeight: 1.7, marginBottom: 6 },
+  painHighlight: { fontSize: 15, color: '#e8eaf0', fontWeight: 500, marginTop: 10, lineHeight: 1.7 },
   formWrap: {
     marginTop: 40, maxWidth: 480, width: '100%',
     display: 'flex', flexDirection: 'column', gap: 12,
