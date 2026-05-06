@@ -7,16 +7,31 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
 
-  function handleSubmit() {
+  async function handleSubmit() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       setError(true)
       setTimeout(() => setError(false), 2500)
       return
     }
-    setSubmitted(true)
-    // Aqui vai a integração com MailerLite/Resend futuramente
-    console.log('Email capturado:', email)
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+        setTimeout(() => setError(false), 2500)
+      }
+    } catch {
+      setError(true)
+      setTimeout(() => setError(false), 2500)
+    }
   }
 
   return (
