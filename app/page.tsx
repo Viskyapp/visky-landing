@@ -39,7 +39,7 @@ export default function Home() {
       {/* NAV */}
       <nav style={styles.nav}>
         <span style={styles.logo}>VISKY</span>
-        <span style={styles.navBadge}>Lista de espera aberta</span>
+        <span style={styles.navBadge}>Acesso antecipado — vagas limitadas</span>
       </nav>
 
       {/* HERO */}
@@ -91,7 +91,7 @@ export default function Home() {
               </button>
               <p style={styles.formNote}>
                 Seja um dos primeiros a testar.{' '}
-                <strong style={{ color: 'var(--accent)' }}>7 dias grátis garantidos.</strong>
+                <strong style={{ color: 'var(--accent)' }}>Preço de early access travado para sempre.</strong>
               </p>
             </>
           ) : (
@@ -137,7 +137,7 @@ export default function Home() {
       {/* CTA BOTTOM */}
       <section style={styles.ctaBottom}>
         <h2 style={styles.ctaTitle}>Pare de ser seu<br />próprio inimigo.</h2>
-        <p style={styles.ctaSub}>Entre na lista e garanta seu acesso antecipado com 7 dias grátis.</p>
+        <p style={styles.ctaSub}>Entre na lista e garanta seu o preço de early access — travado enquanto o produto não lançar.</p>
         <button
           style={styles.btnOutline}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
